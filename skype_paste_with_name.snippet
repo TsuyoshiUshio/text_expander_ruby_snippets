@@ -1,0 +1,22 @@
+#! /usr/bin/env ruby
+
+$KCODE = 'u'
+
+require 'osx/cocoa'
+include OSX
+
+clip_board = NSPasteboard.generalPasteboard.stringForType(NSStringPboardType).to_s
+previous_user_name = ''
+clip_board.each_line{|line|
+        /^\[.*\].*:/ =~ line
+        match_string = $&
+        unless match_string.nil? then
+                user_name =  match_string.gsub(/^\[.*\]/,'')
+                unless user_name == previous_user_name then
+                        puts "------------------------"
+                        puts user_name
+                        puts "------------------------"
+                end
+                previous_user_name = user_name
+        end
+        puts line.gsub(/^\[.*\].*:/, '')}
