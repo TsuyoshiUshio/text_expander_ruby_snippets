@@ -2,7 +2,7 @@ Text Expander snippets written by ruby
 ===========================
 #prerequisite
 -----------------
-TODO
+TODO Ops. This stuff has some problem. hmm. I'll fix it.
 
 This is just my environment.
 
