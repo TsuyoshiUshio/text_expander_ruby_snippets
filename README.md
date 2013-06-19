@@ -22,3 +22,10 @@ ruby 1.8.7
 Copy skype timeline.
 Then type the Abbreviation. 
 
+##skype_paste.snippet
+
+if you want to copy and paste without "[time] name:" section use this.
+
+##skype_paste_with_name.snippet
+
+if you want to copy and paste without "[time] name:" section with username use this.
