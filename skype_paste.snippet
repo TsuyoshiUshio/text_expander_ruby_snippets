@@ -1,0 +1,9 @@
+#! /usr/bin/env ruby
+
+$KCODE = 'u'
+
+require 'osx/cocoa'
+include OSX
+
+clip_board = NSPasteboard.generalPasteboard.stringForType(NSStringPboardType).to_s
+clip_board.each_line{|line| puts line.gsub(/^\[.*\].*:/, '')}
